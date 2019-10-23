@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -8,28 +8,28 @@
 #include "EventManager.generated.h"
 
 /**
- * ÊÂ¼ş·Ö·¢»úÖÆ¹ÜÀíÆ÷
+ * äº‹ä»¶åˆ†å‘æœºåˆ¶ç®¡ç†å™¨
  */
 UCLASS()
 class EVENTUTILITY_API UEventManager : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()	
 public:
-	/** ×¢²á¹Û²ìÕß(¼àÌıÕß) */
+	/** æ³¨å†Œè§‚å¯Ÿè€…(ç›‘å¬è€…) */
 	UFUNCTION(BlueprintCallable, Category = "EventDistributionUtility")
 		static void AddEventListener(FString EventName, UObject* Listener);
-	/** ÒÆ³ı¹Û²ìÕß(¼àÌıÕß) */
+	/** ç§»é™¤è§‚å¯Ÿè€…(ç›‘å¬è€…) */
 	UFUNCTION(BlueprintCallable, Category = "EventDistributionUtility")
 		static void RemoveEventListener(FString EventName, UObject* Listener);
 
-	/** ¸ù¾İÀàĞÍ´´½¨Êı¾İÀà¶ÔÏó£¬²¢·µ»Ø¸Ã¶ÔÏóÖ¸Õë */
+	/** æ ¹æ®ç±»å‹åˆ›å»ºæ•°æ®ç±»å¯¹è±¡ï¼Œå¹¶è¿”å›è¯¥å¯¹è±¡æŒ‡é’ˆ */
 	UFUNCTION(BlueprintCallable, Category = "EventDistributionUtility")
 		static UObject* NewAsset(UClass* ClassType);
-	/** ·¢ËÍÊÂ¼ş */
+	/** å‘é€äº‹ä»¶ */
 	UFUNCTION(BlueprintCallable, Category = "EventDistributionUtility")
 		static FString DispatchEvent(FString EventName, UObject* Datas);
 
 private:
-	/** ´æ·ÅËùÓĞ¹Û²ìÕß¶ÔÏóµÄÁĞ±í£¬½öÓÉEventManager×Ô¼º¹ÜÀí */
+	/** å­˜æ”¾æ‰€æœ‰è§‚å¯Ÿè€…å¯¹è±¡çš„åˆ—è¡¨ï¼Œä»…ç”±EventManagerè‡ªå·±ç®¡ç† */
 	static TMap<FString, TArray<UObject*>> AllListener;
 };

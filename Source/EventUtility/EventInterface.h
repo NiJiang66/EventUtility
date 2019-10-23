@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -13,13 +13,13 @@ class UEventInterface : public UInterface
 };
 
 /**
- * ÊÂ¼ş·Ö·¢»úÖÆ½Ó¿Ú
+ * äº‹ä»¶åˆ†å‘æœºåˆ¶æ¥å£
  */
 class EVENTUTILITY_API IEventInterface
 {
 	GENERATED_BODY()
 public:
-	/** µ±ÊÂ¼ş·¢ËÍÊ±µ÷ÓÃ¹Û²ìÕß(¼àÌıÕß)µÄExecuteFunº¯Êı£¬ÊµÌå¶ÔÏóÍ¨¹ıÊµÏÖ¸Ã½Ó¿Ú¾Í³ÉÎª¹Û²ìÕß(¼àÌıÕß) */
+	/** å½“äº‹ä»¶å‘é€æ—¶è°ƒç”¨è§‚å¯Ÿè€…(ç›‘å¬è€…)çš„ExecuteFunå‡½æ•°ï¼Œå®ä½“å¯¹è±¡é€šè¿‡å®ç°è¯¥æ¥å£å°±æˆä¸ºè§‚å¯Ÿè€…(ç›‘å¬è€…) */
 	UFUNCTION(BlueprintImplementableEvent, Category = "EventDistributionUtility")
 		void ExecuteFun(UObject* Datas);
 };
